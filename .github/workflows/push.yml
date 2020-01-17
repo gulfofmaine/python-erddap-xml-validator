@@ -32,6 +32,12 @@ jobs:
 
     check:
         runs-on: ubuntu-18.04
+        strategy:
+            matrix:
+                tox-testenv:
+                    [clean, check_dist, docs, mypy, flake8, isort, black]
+
+            fail-fast: true
 
         steps:
             - name: Checkout
@@ -48,30 +54,5 @@ jobs:
                   pip install tox
                   python setup.py install
 
-            - name: Clean
-              run: tox -e clean
-              continue-on-error: true
-
-            - name: Check Distribution
-              run: tox -e check_dist
-              continue-on-error: true
-
-            - name: Docs
-              run: tox -e docs
-              continue-on-error: true
-
-            - name: MyPy
-              run: tox -e mypy
-              continue-on-error: true
-
-            - name: Flake8
-              run: tox -e flake8
-              continue-on-error: true
-
-            - name: Isort
-              run: tox -e isort
-              continue-on-error: true
-
-            - name: Black
-              run: tox -e Black
-              continue-on-error: true
+            - name: Tox ${{ matrix.tox-testenv }}
+              run: tox -e ${{ matrix.tox-testenv }}
