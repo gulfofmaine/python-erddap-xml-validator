@@ -50,8 +50,8 @@ jobs:
             - name: Clean
               run: tox -e clean
 
-            - name: Check
-              run: tox -e check
+            - name: Check Distribution
+              run: tox -e check_dist
 
             - name: Docs
               run: tox -e docs
