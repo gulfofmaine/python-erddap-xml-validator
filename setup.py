@@ -32,6 +32,7 @@ setup(
         ),
         re.sub(":[a-z]+:`~?(.*?)`", r"``\1``", read("CHANGELOG.rst")),
     ),
+    long_description_content_type="text/x-rst",
     author="Alex Kerney",
     author_email="akerney@gmri.org",
     url="https://github.com/gulfofmaine/python-erddap-xml-validator",
@@ -57,10 +58,6 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
-        # uncomment if you test on these interpreters:
-        # 'Programming Language :: Python :: Implementation :: IronPython',
-        # 'Programming Language :: Python :: Implementation :: Jython',
-        # 'Programming Language :: Python :: Implementation :: Stackless',
         "Topic :: Utilities",
     ],
     project_urls={
@@ -70,15 +67,16 @@ setup(
     },
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
+        "ERDDAP"
     ],
     python_requires=">=3.5",
-    install_requires=[
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
-    ],
+    install_requires=["lxml==4.4.2"],
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],
         #   ':python_version=="2.6"': ['argparse'],
     },
-    entry_points={"console_scripts": ["erddap_xml = erddap_xml.cli:main"]},
+    entry_points={
+        "console_scripts": ["erddap_xml_validate = erddap_xml.cli_validate:main"]
+    },
 )

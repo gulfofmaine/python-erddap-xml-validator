@@ -1,0 +1,3 @@
+<dataset type="EDDTableFromErddap" datasetID="UCONN_ARTG_WQ_BTM" active="true">
+    <sourceUrl>http://merlin.dms.uconn.edu:8080/erddap/tabledap/ARTG_WQ_BTM</sourceUrl>
+</dataset>

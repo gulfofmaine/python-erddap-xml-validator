@@ -7,7 +7,6 @@ source =
 branch = true
 source =
     erddap_xml
-    tests
 parallel = true
 
 [report]
