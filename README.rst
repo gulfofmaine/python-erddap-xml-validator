@@ -10,7 +10,7 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
+      - | |actions| |requires|
         | |codecov|
         | |codacy|
     * - package
@@ -20,13 +20,9 @@ Overview
     :target: https://readthedocs.org/projects/python-erddap-xml-validator
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.org/gulfofmaine/python-erddap-xml-validator.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/gulfofmaine/python-erddap-xml-validator
-
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/gulfofmaine/python-erddap-xml-validator?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/gulfofmaine/python-erddap-xml-validator
+.. |actions| image:: https://github.com/gulfofmaine/python-erddap-xml-validator/workflows/Push/badge.svg
+    :alt: Github Actions Build Status
+    :target: https://github.com/gulfofmaine/python-erddap-xml-validator/actions?query=workflow%3APush
 
 .. |requires| image:: https://requires.io/github/gulfofmaine/python-erddap-xml-validator/requirements.svg?branch=master
     :alt: Requirements Status
