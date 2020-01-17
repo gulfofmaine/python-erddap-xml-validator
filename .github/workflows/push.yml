@@ -50,16 +50,28 @@ jobs:
 
             - name: Clean
               run: tox -e clean
+              continue-on-error: true
 
             - name: Check Distribution
               run: tox -e check_dist
+              continue-on-error: true
 
             - name: Docs
               run: tox -e docs
+              continue-on-error: true
 
-            - name: Python Code Quality and Lint
-              uses: ricardochaves/python-lint@v1.1.0
-              with:
-                  python-root-list: "src"
-                  use-pylint: false
-                  use-pycodestyle: false
+            - name: MyPy
+              run: tox -e mypy
+              continue-on-error: true
+
+            - name: Flake8
+              run: tox -e flake8
+              continue-on-error: true
+
+            - name: Isort
+              run: tox -e isort
+              continue-on-error: true
+
+            - name: Black
+              run: tox -e Black
+              continue-on-error: true
