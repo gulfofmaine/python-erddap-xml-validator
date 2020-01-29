@@ -70,7 +70,7 @@ setup(
         "ERDDAP"
     ],
     python_requires=">=3.5",
-    install_requires=["lxml==4.4.2"],
+    install_requires=["lxml==4.4.3"],
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],
